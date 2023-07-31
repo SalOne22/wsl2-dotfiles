@@ -74,4 +74,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# dotfiles managment
 alias config='/usr/bin/git --git-dir=/home/salone/.cfg/ --work-tree=/home/salone'
