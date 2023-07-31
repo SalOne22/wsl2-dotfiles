@@ -35,10 +35,6 @@ esac
         https://github.com/marlonrichert/zsh-snap.git ~/.zsh/znap
 source ~/.zsh/znap/znap.zsh
 
-# Start starship ✨
-znap eval starship 'starship init zsh'
-znap prompt
-
 # Setup plugins
 plugins=(
   'zsh-users/zsh-syntax-highlighting'
@@ -64,6 +60,10 @@ plugins=(
 for plugin in $plugins; do
     znap source "$plugin"
 done
+
+# Start starship ✨
+znap eval starship 'starship init zsh'
+znap prompt
 
 # ------------------------ ⚙️ Plugin configuration ⚙️ -------------------------
 
