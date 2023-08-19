@@ -21,6 +21,7 @@ export NVM_AUTO_USE=true
 
 # PATH settings
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/bin"
 PNPM_HOME="/home/salone/.local/share/pnpm"
 case ":$PATH:" in
     *":$PNPM_HOME:"*) ;;
@@ -49,11 +50,9 @@ plugins=(
   'zsh-users/zsh-autosuggestions'
   'zplugin/zsh-exa'
   'davidde/git'
-  'oldratlee/hacker-quotes'
   'mat2ja/pnpm.plugin.zsh'
   'none9632/zsh-sudo'
   'trystan2k/zsh-tab-title'
-  'dashixiong91/zsh-vscode'
   'florentinl/omz-wsl'
 )
 
