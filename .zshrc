@@ -37,28 +37,23 @@ esac
 source ~/.zsh/znap/znap.zsh
 
 # Setup plugins
-plugins=(
-  'zsh-users/zsh-syntax-highlighting'
-  'lukechilds/zsh-nvm'
-  'lukechilds/zsh-better-npm-completion'
-  'marlonrichert/zsh-autocomplete'
-  'djui/alias-tips'
-  'fdellwing/zsh-bat'
-  'chrissicool/zsh-256color'
-  'Junker/zsh-archlinux'
-  'hlissner/zsh-autopair'
-  'zsh-users/zsh-autosuggestions'
-  'zplugin/zsh-exa'
-  'davidde/git'
-  'mat2ja/pnpm.plugin.zsh'
-  'none9632/zsh-sudo'
-  'trystan2k/zsh-tab-title'
-  'florentinl/omz-wsl'
-)
 
-for plugin in $plugins; do
-    znap source "$plugin"
-done
+znap source zsh-users/zsh-syntax-highlighting
+znap source lukechilds/zsh-nvm
+znap source lukechilds/zsh-better-npm-completion
+znap source marlonrichert/zsh-autocomplete
+znap source djui/alias-tips
+znap source fdellwing/zsh-bat
+znap source chrissicool/zsh-256color
+znap source Junker/zsh-archlinux
+znap source hlissner/zsh-autopair
+znap source zsh-users/zsh-autosuggestions
+znap source zplugin/zsh-exa
+znap source davidde/git
+znap source mat2ja/pnpm.plugin.zsh
+znap source none9632/zsh-sudo
+znap source trystan2k/zsh-tab-title
+znap source florentinl/omz-wsl
 
 # Start starship ✨
 znap eval starship 'starship init zsh'
