@@ -9,12 +9,6 @@ SAVEHIST=1000
 setopt beep
 bindkey -e
 
-# compinit settings
-zstyle :compinstall filename '/home/salone/.zshrc'
-
-autoload -Uz compinit
-compinit
-
 # NVM settings
 export NVM_COMPLETION=true
 export NVM_AUTO_USE=true
@@ -27,6 +21,8 @@ case ":$PATH:" in
     *":$PNPM_HOME:"*) ;;
     *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+export DENO_INSTALL="/home/salone/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # ------------------------------- ✨ Plugins ✨ ------------------------------- 
 
