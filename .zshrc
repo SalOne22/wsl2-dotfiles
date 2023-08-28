@@ -16,13 +16,6 @@ export NVM_AUTO_USE=true
 # PATH settings
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
-PNPM_HOME="/home/salone/.local/share/pnpm"
-case ":$PATH:" in
-    *":$PNPM_HOME:"*) ;;
-    *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-export DENO_INSTALL="/home/salone/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
 
 # ------------------------------- ✨ Plugins ✨ ------------------------------- 
 
@@ -74,3 +67,19 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡Tip: "
 
 # dotfiles management
 alias config='/usr/bin/git --git-dir=/home/salone/.cfg/ --work-tree=/home/salone'
+
+# pnpm
+export PNPM_HOME="/home/salone/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# deno
+export DENO_INSTALL="/home/salone/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+# deno end
+
+# Setup deno autocompletions 👀
+znap fpath _deno 'deno completions zsh'
